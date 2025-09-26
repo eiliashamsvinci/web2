@@ -78,8 +78,6 @@ router.get("/", (req, res) => {
 
 //add new film
 router.post("/", (req, res) => {
-  // const body : unknown = req.body ;
-  // if(!body || typeof body !=="object"|| !("title" in body) ||  !("director" in body) || typeof body.title !=="string" )
 
   const { title, director, duration, budget, description, imageUrl } = req.body;
 
@@ -183,7 +181,7 @@ router.patch("/:id", (req, res) => {
     return res.sendStatus(400); 
   }
 
-  const { title, director, duration, budget, description, imageUrl }: Partial<Film> = body;
+  const { title, director, duration, budget, description, imageUrl }= req.body;
 
   if (title) film.title = title;
   if (director) film.director = director;
