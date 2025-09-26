@@ -1,0 +1,71 @@
+@baseUrl = http://localhost:3000
+
+### Read all films
+GET {{baseUrl}}/films
+
+### Read a single film
+GET {{baseUrl}}/films/2
+### Read a single film that does not exist
+GET {{baseUrl}}/films/999
+ 
+### duractionFilter
+
+GET {{baseUrl}}/films?minimum-duration=100
+ 
+
+### Filter films that start with "In"
+GET {{baseUrl}}/films?starts-with=in
+### Create a new film
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+  "title": "aew Film",
+  "director": "John Doe",
+  "duration": 120,
+  "budget": 100,
+  "description": "A new film description.",
+  "imageUrl": "https://image.tmdb.org/t/p/newfilm.jpg"
+}
+### Delete a film
+DELETE {{baseUrl}}/films/3
+### Delete a film that does not exist
+DELETE {{baseUrl}}/films/999
+### Update a film
+PUT {{baseUrl}}/films/2
+Content-Type: application/json
+
+{
+  "title": "Updated Film",
+  "director": "Jane Doe",
+  "duration": 130,
+  "budget": 150,
+  "description": "An updated film description.",
+  "imageUrl": "https://image.tmdb.org/t/p/updatedfilm.jpg"
+} 
+### Update a film that does not exist
+PUT {{baseUrl}}/films/999
+Content-Type: application/json
+
+{
+  "title": "Updated Film",
+  "director": "Jane Doe",
+  "duration": 130,
+  "budget": 150,
+  "description": "An updated film description.",
+  "imageUrl": "https://image.tmdb.org/t/p/updatedfilm.jpg"
+}
+### PATCH a film
+PATCH {{baseUrl}}/films/4
+Content-Type: application/json 
+
+{
+  "budget": 200
+}
+### PATCH a film that does not exist
+PATCH {{baseUrl}}/films/999
+Content-Type: application/json
+
+{
+  "budget": 200
+}
