@@ -1,0 +1,12 @@
+.pizza-menu {
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: red;
+}
+.cinema-bors{
+ border: 1px solid red;
+ align-items: center;
+ margin-right: -50%;
+width: 90%;
+}
