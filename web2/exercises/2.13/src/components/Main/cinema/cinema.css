@@ -1,0 +1,35 @@
+.movie-list {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.movie-item {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.movie-item:hover {
+  background-color: #f9f9f9;
+}
+
+.movie-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.movie-details {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  color: #555;
+}
+
+.movie-details p {
+  margin: 0.25rem 0;
+}
