@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+
+<body>
+    <table border="1" cellspacing="0" cellpadding="5">
+  <thead>
+    <tr>
+      <th>URI</th>
+      <th>HTTP Method</th>
+      <th>Auth</th>
+      <th>Operation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Films -->
+    <tr>
+      <td>/films</td>
+      <td>GET</td>
+      <td>No</td>
+      <td>READ ALL: Lire toutes les ressources de la collection, avec filtres minDuration et starts-with</td>
+    </tr>
+    <tr>
+      <td>/films/:id</td>
+      <td>GET</td>
+      <td>No</td>
+      <td>READ ONE: Lire une ressource spécifique</td>
+    </tr>
+    <tr>
+      <td>/films</td>
+      <td>POST</td>
+      <td>Yes (Admin)</td>
+      <td>CREATE ONE: Créer un film avec body {title, director, duration, budget?, description?, imageUrl?}</td>
+    </tr>
+    <tr>
+      <td>/films/:id</td>
+      <td>PUT</td>
+      <td>Yes (Admin)</td>
+      <td>REPLACE ONE: Remplacer un film existant</td>
+    </tr>
+    <tr>
+      <td>/films/:id</td>
+      <td>PATCH</td>
+      <td>Yes (Admin)</td>
+      <td>UPDATE ONE: Mettre à jour partiellement un film</td>
+    </tr>
+    <tr>
+      <td>/films/:id</td>
+      <td>DELETE</td>
+      <td>Yes (Admin)</td>
+      <td>DELETE ONE: Supprimer un film</td>
+    </tr>
+
+    <!-- Comments -->
+    <tr>
+      <td>/comments</td>
+      <td>GET</td>
+      <td>Yes (JWT)</td>
+      <td>READ ALL FILTERED: Lire tous les commentaires</td>
+    </tr>
+    <tr>
+      <td>/comments</td>
+      <td>POST</td>
+      <td>Yes (JWT)</td>
+      <td>CREATE ONE: Ajouter un commentaire {filmId, username, content}</td>
+    </tr>
+    <tr>
+      <td>/comments/:filmId/:username</td>
+      <td>DELETE</td>
+      <td>Yes (JWT)</td>
+      <td>DELETE ONE: Supprimer un commentaire spécifique</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</body>
+</html>

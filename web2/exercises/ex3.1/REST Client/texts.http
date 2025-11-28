@@ -1,0 +1,28 @@
+@baseUrl = http://localhost:3000
+
+### Get all texts
+GET {{baseUrl}}/texts
+
+### Get one text
+GET {{baseUrl}}/texts/45a3397c-d9bd-440b-8099-4346a38d1428
+
+### Create
+POST {{baseUrl}}/texts
+Content-Type: application/json
+
+{
+  "content": "New text content",
+  "level": "easy"
+}
+
+### Update
+PUT {{baseUrl}}/texts/45a3397c-d9bd-440b-8099-4346a38d1428
+Content-Type: application/json
+
+{
+  "content": "Updated text content",
+  "level": "medium"
+}
+
+### Delete
+DELETE {{baseUrl}}/texts/45a3397c-d9bd-440b-8099-4346a38d1428
